@@ -33,13 +33,19 @@ public class LineLenghtComputation {
 		double Line_Lenght2 = Math.sqrt( (px2 - px1) ^ 2 + (py2- py1) ^ 2);
 	    System.out.println("Lenght of line : "+ Line_Lenght2);
 	    
-	    if( Line_Lenght2== Line_Lenght1  ) {
-			System.out.println("\nBoth lines are equal!");
-			
-		}
-		else {
-			System.out.println("\nLines are Distinct!");
-		}
-	 
+	    int value1 = (int)Line_Lenght1;
+		int value2 = (int)Line_Lenght2;
+		
+		Integer x =  Integer.valueOf(value1);  
+        Integer y=  Integer.valueOf(value2);
+        
+        int retResult =  x.compareTo(y);        
+        if(retResult > 0) {  
+           System.out.println("x is greater than y");  
+        } else if(retResult< 0) {  
+           System.out.println("x is less than y");  
+        } else {  
+           System.out.println("x is equal to y");  
+        }  
 	}
 }
